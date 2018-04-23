@@ -1,0 +1,7 @@
+# An Xorg autostart file, to be placed in ~/.config/lxsession/LXDE/autostart.
+@lxpanel --profile LXDE
+@nitrogen --restore
+@lxterminal --geometry=120x59
+#@lxterminal --geometry=120x100
+@redshift -l 45:-73 -t 2200:1200 &
+#@xscreensaver &
