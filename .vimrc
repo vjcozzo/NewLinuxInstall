@@ -47,11 +47,20 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 " ---------------------------------------------------------------------------
-set nu
-colorscheme blue
+
+" show line numbers and highlight search results
+set nu hlsearch
+
+colorscheme industry
 
 set smarttab autoindent
 set tabstop=2 shiftwidth=2 expandtab
 
 map <ScrollWheelUp> <nop>
 map <ScrollWheelDown> <nop>
+
+" From /etc/vimrc/.vimrc:
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
